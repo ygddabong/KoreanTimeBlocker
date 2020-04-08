@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06F2185E480464521F1151ED /* Pods_KoreanTimeBlocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA1F7A62DA2E44965F5310C /* Pods_KoreanTimeBlocker.framework */; };
 		7E92C06D243B65D200648FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92C06C243B65D200648FAF /* AppDelegate.swift */; };
 		7E92C06F243B65D200648FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92C06E243B65D200648FAF /* SceneDelegate.swift */; };
 		7E92C071243B65D200648FAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92C070243B65D200648FAF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CA1F7A62DA2E44965F5310C /* Pods_KoreanTimeBlocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreanTimeBlocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E92C069243B65D200648FAF /* KoreanTimeBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreanTimeBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E92C06C243B65D200648FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E92C06E243B65D200648FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		7E92C075243B65D700648FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E92C078243B65D800648FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E92C07A243B65D800648FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C3E744801BB4D143EC0C0E /* Pods-KoreanTimeBlocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreanTimeBlocker.debug.xcconfig"; path = "Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker.debug.xcconfig"; sourceTree = "<group>"; };
+		C33D125562D7A6EB4FB522B7 /* Pods-KoreanTimeBlocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreanTimeBlocker.release.xcconfig"; path = "Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F2185E480464521F1151ED /* Pods_KoreanTimeBlocker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				7E92C06B243B65D200648FAF /* KoreanTimeBlocker */,
 				7E92C06A243B65D200648FAF /* Products */,
+				F1E1002867227BCFABB3C94A /* Pods */,
+				D874FA356E00B575806E6449 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = KoreanTimeBlocker;
 			sourceTree = "<group>";
 		};
+		D874FA356E00B575806E6449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CA1F7A62DA2E44965F5310C /* Pods_KoreanTimeBlocker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1E1002867227BCFABB3C94A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82C3E744801BB4D143EC0C0E /* Pods-KoreanTimeBlocker.debug.xcconfig */,
+				C33D125562D7A6EB4FB522B7 /* Pods-KoreanTimeBlocker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E92C07D243B65D800648FAF /* Build configuration list for PBXNativeTarget "KoreanTimeBlocker" */;
 			buildPhases = (
+				5546B84468E44F6A28708C40 /* [CP] Check Pods Manifest.lock */,
 				7E92C065243B65D200648FAF /* Sources */,
 				7E92C066243B65D200648FAF /* Frameworks */,
 				7E92C067243B65D200648FAF /* Resources */,
+				ACED236CD5E4EEC4383273F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5546B84468E44F6A28708C40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoreanTimeBlocker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACED236CD5E4EEC4383273F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E92C065243B65D200648FAF /* Sources */ = {
@@ -282,11 +350,13 @@
 		};
 		7E92C07E243B65D800648FAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82C3E744801BB4D143EC0C0E /* Pods-KoreanTimeBlocker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNKLP2U2NQ;
 				INFOPLIST_FILE = KoreanTimeBlocker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +370,13 @@
 		};
 		7E92C07F243B65D800648FAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33D125562D7A6EB4FB522B7 /* Pods-KoreanTimeBlocker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UNKLP2U2NQ;
 				INFOPLIST_FILE = KoreanTimeBlocker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
