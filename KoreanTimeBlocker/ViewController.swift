@@ -17,34 +17,54 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
     var locationManager: CLLocationManager!
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
+    var placesClient: GMSPlacesClient!
     
+    var startingPlace = ""
+    var endingPlace = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentPlace()
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        searchMaps()
         
-        let coor  = locationManager.location?.coordinate
-        var latitude = coor?.latitude
-        var longitude = coor?.longitude
-        // Do any additional setup after loading the view.
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        
-        let camera = GMSCameraPosition.camera(withLatitude: latitude!, longitude: longitude!, zoom: 16.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-        self.view.addSubview(mapView)
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
-        //        marker.title = "Current Location"
-        //        marker.snippet = "Australia"
-        marker.map = mapView
-        
+
+
+    }
+    
+    func currentPlace(){
+        placesClient = GMSPlacesClient.shared()
+        placesClient.currentPlace(callback: { (placeLikelihoodList, error) -> Void in
+          if let error = error {
+            print("Current Place error: \(error.localizedDescription)")
+            return
+          }
+            
+          if let placeLikelihoodList = placeLikelihoodList {
+            guard let place = placeLikelihoodList.likelihoods.first?.place else {return}
+            print("CurrentPlace : \(place.name ?? "")")
+            self.startingPlace = place.name!
+            let camera = GMSCameraPosition.camera(withLatitude:             place.coordinate.latitude
+                , longitude:place.coordinate.longitude, zoom: 16.0)
+             let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+             self.view.addSubview(mapView)
+             
+             // Creates a marker in the center of the map.
+             let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: place.coordinate.latitude
+                , longitude:place.coordinate.longitude)
+             marker.map = mapView
+          }
+        })
+    }
+    
+    
+    func searchMaps(){
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
 
@@ -61,9 +81,6 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
 
         // Prevent the navigation bar from being hidden when searching.
         searchController?.hidesNavigationBarDuringPresentation = false
-        
-        
-        
     }
     
 }
@@ -74,7 +91,8 @@ extension ViewController: GMSAutocompleteResultsViewControllerDelegate {
                          didAutocompleteWith place: GMSPlace) {
     searchController?.isActive = false
     // Do something with the selected place.
-    print("Place name: \(place.name)")
+    print("didSelectPlaceName: \(place.name ?? "")")
+    self.endingPlace = place.name!
 
   }
 
