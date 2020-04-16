@@ -24,6 +24,21 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="88.392857142857139"/>
         </scene>
+        <!--Alarm Setting View Controller-->
+        <scene sceneID="YI4-Eg-JI0">
+            <objects>
+                <viewController storyboardIdentifier="AlarmSettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dz4-dj-LoY" customClass="AlarmSettingViewController" customModule="KoreanTimeBlocker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bov-7o-2UD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="y7n-ZU-2Fk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jd6-6b-SXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896" y="83"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="N7S-YR-orn">
             <objects>
