@@ -20,7 +20,7 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
     var placesClient: GMSPlacesClient!
     var mapView: GMSMapView!
     
-    
+    var destinationPlaceName = ""
     
     var startCoordinate:CLLocationCoordinate2D?
     var destCoordinate:CLLocationCoordinate2D?
@@ -88,10 +88,8 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
     func mapThis(destinationCord : CLLocationCoordinate2D) {
         
         let souceCordinate = (locationManager.location?.coordinate)!
-        
         let soucePlaceMark = MKPlacemark(coordinate: souceCordinate)
         let destPlaceMark = MKPlacemark(coordinate: destinationCord)
-        
         let sourceItem = MKMapItem(placemark: soucePlaceMark)
         let destItem = MKMapItem(placemark: destPlaceMark)
         
@@ -111,11 +109,12 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
                 return
             }
             let route = response.routes[0]
-            let resultTime = ceil((route.expectedTravelTime)/60)
-            print("resultTime: \(resultTime) MIN")
+            let resultTime = "\(Int(ceil((route.expectedTravelTime)/60)))"
+            print("resultTime: \(resultTime)")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AlarmSettingViewController") as? AlarmSettingViewController
+            vc?.responsePlace = self.destinationPlaceName
+            vc?.responseTime = resultTime
             self.navigationController?.pushViewController(vc!, animated: true)
-            
         }
     }
 }
@@ -127,6 +126,7 @@ extension ViewController: GMSAutocompleteResultsViewControllerDelegate {
         searchController?.isActive = false
         // Do something with the selected place.
         print("didSelectPlaceName: \(place.name ?? "")")
+        self.destinationPlaceName = place.name ?? ""
         self.destCoordinate = place.coordinate
         self.mapThis(destinationCord: destCoordinate!)
     }

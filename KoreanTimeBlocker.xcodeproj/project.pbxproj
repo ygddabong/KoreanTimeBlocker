@@ -15,6 +15,7 @@
 		7E92C076243B65D700648FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E92C075243B65D700648FAF /* Assets.xcassets */; };
 		7E92C079243B65D800648FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E92C077243B65D800648FAF /* LaunchScreen.storyboard */; };
 		7E9E1BA02448C52C001937D8 /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E1B9F2448C52C001937D8 /* AlarmSettingViewController.swift */; };
+		7E9E1BA2244B4B10001937D8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E1BA1244B4B10001937D8 /* Alarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7E92C078243B65D800648FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E92C07A243B65D800648FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9E1B9F2448C52C001937D8 /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
+		7E9E1BA1244B4B10001937D8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		82C3E744801BB4D143EC0C0E /* Pods-KoreanTimeBlocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreanTimeBlocker.debug.xcconfig"; path = "Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker.debug.xcconfig"; sourceTree = "<group>"; };
 		C33D125562D7A6EB4FB522B7 /* Pods-KoreanTimeBlocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreanTimeBlocker.release.xcconfig"; path = "Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				7E92C06E243B65D200648FAF /* SceneDelegate.swift */,
 				7E92C070243B65D200648FAF /* ViewController.swift */,
 				7E9E1B9F2448C52C001937D8 /* AlarmSettingViewController.swift */,
+				7E9E1BA1244B4B10001937D8 /* Alarm.swift */,
 				7E92C072243B65D200648FAF /* Main.storyboard */,
 				7E92C075243B65D700648FAF /* Assets.xcassets */,
 				7E92C077243B65D800648FAF /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			files = (
 				7E92C071243B65D200648FAF /* ViewController.swift in Sources */,
 				7E92C06D243B65D200648FAF /* AppDelegate.swift in Sources */,
+				7E9E1BA2244B4B10001937D8 /* Alarm.swift in Sources */,
 				7E9E1BA02448C52C001937D8 /* AlarmSettingViewController.swift in Sources */,
 				7E92C06F243B65D200648FAF /* SceneDelegate.swift in Sources */,
 			);
