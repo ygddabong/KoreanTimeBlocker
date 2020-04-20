@@ -27,6 +27,8 @@ class AlarmSettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 
         self.navigationItem.title = "Alarm Setting"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.addAlarm(_:)))
@@ -36,6 +38,10 @@ class AlarmSettingViewController: UIViewController {
         if let timeText = responseTime {
             expectedTimeTextField.text = "\(timeText)MIN"
         }
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
 
 
@@ -51,9 +57,6 @@ class AlarmSettingViewController: UIViewController {
         alert.addTextField{(textField) in
             textField.placeholder = "Time"
         }
-        
-
-       // alert.addAction(UIAlertAction(title: "OK", style: .default, handler:nil))
 
 
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler:{
@@ -69,8 +72,10 @@ class AlarmSettingViewController: UIViewController {
             newAlarm.name = alarmName
             newAlarm.time = alarmTime
             self.alarmList.append(newAlarm)
-            print("alarmList: \(self.alarmList[0])")
-
+            print("alarmList: \(self.alarmList)")
+            DispatchQueue.main.async {
+                self.tableView.reloadData();
+            }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
 
@@ -102,6 +107,9 @@ extension AlarmSettingViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let alarmTitle = alarmList[indexPath.row].name
+        let alarmTIme = alarmList[indexPath.row].time
+        cell.textLabel?.text = "\(alarmTitle ?? "Non title") / time: \(alarmTIme ?? "0")MIN"
         return cell
     }
 }

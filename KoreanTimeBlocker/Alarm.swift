@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Alarm {
+class Alarm: NSObject {
     var uuid: String?
     var name: String?
     var time: String?
