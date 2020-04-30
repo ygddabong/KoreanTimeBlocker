@@ -11,5 +11,6 @@ import Foundation
 class Alarm: NSObject {
     var uuid: String?
     var name: String?
-    var time: String?
+    var time: Int?
+    var alarmTime: Int?
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FFP-ne-H31">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JJg-tH-m3B">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KoreanTimeBlocker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="KoreanTimeBlocker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="88.392857142857139"/>
+            <point key="canvasLocation" x="1952.1739130434785" y="88.392857142857139"/>
         </scene>
         <!--Alarm Setting View Controller-->
         <scene sceneID="YI4-Eg-JI0">
@@ -51,14 +51,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BQa-sb-lYc">
-                                <rect key="frame" x="0.0" y="140" width="414" height="682"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU7-3d-3Ya">
-                                <rect key="frame" x="0.0" y="838" width="414" height="24"/>
+                                <rect key="frame" x="0.0" y="842" width="414" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="4Mo-Up-Q2t"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Complete"/>
                                 <connections>
                                     <action selector="completeButton:" destination="dz4-dj-LoY" eventType="touchUpInside" id="Qi9-gm-QEG"/>
@@ -69,15 +70,15 @@
                         <constraints>
                             <constraint firstItem="y7n-ZU-2Fk" firstAttribute="trailing" secondItem="SU7-3d-3Ya" secondAttribute="trailing" id="3O2-fP-CNx"/>
                             <constraint firstItem="GN6-qt-wRG" firstAttribute="top" secondItem="y7n-ZU-2Fk" secondAttribute="top" constant="16" id="8Dc-7g-pDv"/>
+                            <constraint firstItem="SU7-3d-3Ya" firstAttribute="top" secondItem="BQa-sb-lYc" secondAttribute="bottom" constant="40" id="9Py-vj-AOd"/>
                             <constraint firstItem="2tv-7f-q0h" firstAttribute="leading" secondItem="GN6-qt-wRG" secondAttribute="leading" id="EO7-Ci-gcj"/>
-                            <constraint firstItem="SU7-3d-3Ya" firstAttribute="bottom" secondItem="y7n-ZU-2Fk" secondAttribute="bottom" id="VfP-6P-CX9"/>
+                            <constraint firstAttribute="bottom" secondItem="SU7-3d-3Ya" secondAttribute="bottom" constant="30" id="Mp1-5A-nOJ"/>
                             <constraint firstItem="BQa-sb-lYc" firstAttribute="leading" secondItem="y7n-ZU-2Fk" secondAttribute="leading" id="dTi-KO-DFq"/>
                             <constraint firstItem="BQa-sb-lYc" firstAttribute="trailing" secondItem="y7n-ZU-2Fk" secondAttribute="trailing" id="oDG-Ln-Ixn"/>
                             <constraint firstItem="SU7-3d-3Ya" firstAttribute="centerX" secondItem="BQa-sb-lYc" secondAttribute="centerX" id="pJJ-gv-gYp"/>
                             <constraint firstItem="BQa-sb-lYc" firstAttribute="top" secondItem="2tv-7f-q0h" secondAttribute="bottom" constant="16" id="rgX-1B-XRV"/>
                             <constraint firstItem="2tv-7f-q0h" firstAttribute="trailing" secondItem="GN6-qt-wRG" secondAttribute="trailing" id="s6m-kM-Vbq"/>
                             <constraint firstItem="GN6-qt-wRG" firstAttribute="leading" secondItem="y7n-ZU-2Fk" secondAttribute="leading" constant="16" id="sRD-qt-Afv"/>
-                            <constraint firstItem="SU7-3d-3Ya" firstAttribute="top" secondItem="BQa-sb-lYc" secondAttribute="bottom" constant="16" id="uOR-sl-oMx"/>
                             <constraint firstItem="2tv-7f-q0h" firstAttribute="top" secondItem="GN6-qt-wRG" secondAttribute="bottom" constant="16" id="uU1-at-Dmu"/>
                             <constraint firstItem="SU7-3d-3Ya" firstAttribute="leading" secondItem="y7n-ZU-2Fk" secondAttribute="leading" id="udd-mW-nku"/>
                             <constraint firstItem="y7n-ZU-2Fk" firstAttribute="trailing" secondItem="GN6-qt-wRG" secondAttribute="trailing" constant="16" id="wFz-JP-INA"/>
@@ -92,25 +93,115 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jd6-6b-SXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895.6521739130437" y="82.366071428571431"/>
+            <point key="canvasLocation" x="2805.7971014492755" y="82.366071428571431"/>
+        </scene>
+        <!--Arrive Time Setting View Controller-->
+        <scene sceneID="8Xm-is-NVy">
+            <objects>
+                <viewController storyboardIdentifier="ArriveTimeSettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NR6-Pi-qU0" customClass="ArriveTimeSettingViewController" customModule="KoreanTimeBlocker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nao-CK-s3X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0K-QM-98L">
+                                <rect key="frame" x="0.0" y="367" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="609580288.41868305">
+                                    <!--2020-04-26 07:51:28 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARh-Bj-DdB">
+                                <rect key="frame" x="32" y="795" width="350" height="35"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="Destination Setting"/>
+                                <connections>
+                                    <action selector="destinationSettingBtn:" destination="NR6-Pi-qU0" eventType="touchUpInside" id="Vb3-vF-9JQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrive Time Setting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-uj-cLq">
+                                <rect key="frame" x="0.0" y="152" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="D4P-zE-TQC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="v0K-QM-98L" firstAttribute="centerY" secondItem="azj-Cf-mAS" secondAttribute="centerY" id="3o5-Ug-JJQ"/>
+                            <constraint firstItem="6IB-uj-cLq" firstAttribute="top" secondItem="azj-Cf-mAS" secondAttribute="top" constant="64" id="4IA-EW-4zT"/>
+                            <constraint firstItem="v0K-QM-98L" firstAttribute="trailing" secondItem="azj-Cf-mAS" secondAttribute="trailing" id="5iO-ML-bst"/>
+                            <constraint firstItem="azj-Cf-mAS" firstAttribute="bottom" secondItem="ARh-Bj-DdB" secondAttribute="bottom" constant="32" id="AzH-Cs-Cfs"/>
+                            <constraint firstItem="v0K-QM-98L" firstAttribute="leading" secondItem="azj-Cf-mAS" secondAttribute="leading" id="QkH-BH-OyE"/>
+                            <constraint firstItem="azj-Cf-mAS" firstAttribute="trailing" secondItem="ARh-Bj-DdB" secondAttribute="trailing" constant="32" id="Tmo-ZY-0Ky"/>
+                            <constraint firstItem="6IB-uj-cLq" firstAttribute="leading" secondItem="azj-Cf-mAS" secondAttribute="leading" id="Wvn-Vx-dEP"/>
+                            <constraint firstItem="ARh-Bj-DdB" firstAttribute="centerX" secondItem="azj-Cf-mAS" secondAttribute="centerX" id="d9e-SK-Vfm"/>
+                            <constraint firstItem="v0K-QM-98L" firstAttribute="centerX" secondItem="Nao-CK-s3X" secondAttribute="centerX" id="mbM-l3-M60"/>
+                            <constraint firstItem="ARh-Bj-DdB" firstAttribute="leading" secondItem="azj-Cf-mAS" secondAttribute="leading" constant="32" id="oza-5q-IxS"/>
+                            <constraint firstItem="azj-Cf-mAS" firstAttribute="trailing" secondItem="6IB-uj-cLq" secondAttribute="trailing" id="tIn-ue-NbZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="azj-Cf-mAS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ofm-d3-p5m"/>
+                    <connections>
+                        <outlet property="datePicker" destination="v0K-QM-98L" id="Gge-uE-chm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3a-ud-Gtz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.7246376811595" y="81.696428571428569"/>
+        </scene>
+        <!--Complete View Controller-->
+        <scene sceneID="RFB-m4-ugY">
+            <objects>
+                <viewController storyboardIdentifier="CompleteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hBx-gb-Dpb" customClass="CompleteViewController" customModule="KoreanTimeBlocker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Jk-Ld-SQ3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhS-l0-uIp">
+                                <rect key="frame" x="157" y="403" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FWg-3i-DHy"/>
+                                    <constraint firstAttribute="height" constant="100" id="gAJ-SK-K70"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QhS-l0-uIp" firstAttribute="centerY" secondItem="HNx-1T-JjE" secondAttribute="centerY" id="69R-m5-F2u"/>
+                            <constraint firstItem="QhS-l0-uIp" firstAttribute="centerX" secondItem="HNx-1T-JjE" secondAttribute="centerX" id="7KN-Nb-8ai"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HNx-1T-JjE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yci-GD-YvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3642.0289855072465" y="86.383928571428569"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="N7S-YR-orn">
+        <scene sceneID="DSZ-QR-Ith">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FFP-ne-H31" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JJg-tH-m3B" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SA4-eW-iN1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ayv-dg-xiq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FzA-Wc-UmF"/>
+                        <segue destination="NR6-Pi-qU0" kind="relationship" relationship="rootViewController" id="OnO-FY-jt0"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="slD-kA-Er0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYL-Dd-u1L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
+            <point key="canvasLocation" x="240.57971014492756" y="81.696428571428569"/>
         </scene>
     </scenes>
 </document>

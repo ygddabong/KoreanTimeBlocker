@@ -21,7 +21,7 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
     var mapView: GMSMapView!
     
     var destinationPlaceName = ""
-    
+    var arriveTime: Int?
     var startCoordinate:CLLocationCoordinate2D?
     var destCoordinate:CLLocationCoordinate2D?
     
@@ -113,7 +113,8 @@ class ViewController: UIViewController ,CLLocationManagerDelegate{
             print("resultTime: \(resultTime)")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "AlarmSettingViewController") as? AlarmSettingViewController
             vc?.responsePlace = self.destinationPlaceName
-            vc?.responseTime = resultTime
+            vc?.responseTime = Int(resultTime)
+            vc?.arriveTime = self.arriveTime!
             self.navigationController?.pushViewController(vc!, animated: true)
         }
     }

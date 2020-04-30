@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06F2185E480464521F1151ED /* Pods_KoreanTimeBlocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA1F7A62DA2E44965F5310C /* Pods_KoreanTimeBlocker.framework */; };
+		7E7940B6245574FF0026E0EA /* DateFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7940B5245574FF0026E0EA /* DateFormatted.swift */; };
 		7E92C06D243B65D200648FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92C06C243B65D200648FAF /* AppDelegate.swift */; };
 		7E92C06F243B65D200648FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92C06E243B65D200648FAF /* SceneDelegate.swift */; };
 		7E92C071243B65D200648FAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92C070243B65D200648FAF /* ViewController.swift */; };
@@ -16,10 +17,13 @@
 		7E92C079243B65D800648FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E92C077243B65D800648FAF /* LaunchScreen.storyboard */; };
 		7E9E1BA02448C52C001937D8 /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E1B9F2448C52C001937D8 /* AlarmSettingViewController.swift */; };
 		7E9E1BA2244B4B10001937D8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E1BA1244B4B10001937D8 /* Alarm.swift */; };
+		7EC9F09A244F22AC0013C01E /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC9F099244F22AC0013C01E /* CompleteViewController.swift */; };
+		7EC9F09C2450B1800013C01E /* ArriveTimeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC9F09B2450B1800013C01E /* ArriveTimeSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5CA1F7A62DA2E44965F5310C /* Pods_KoreanTimeBlocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreanTimeBlocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E7940B5245574FF0026E0EA /* DateFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatted.swift; sourceTree = "<group>"; };
 		7E92C069243B65D200648FAF /* KoreanTimeBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoreanTimeBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E92C06C243B65D200648FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E92C06E243B65D200648FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		7E92C07A243B65D800648FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9E1B9F2448C52C001937D8 /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
 		7E9E1BA1244B4B10001937D8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		7EC9F099244F22AC0013C01E /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		7EC9F09B2450B1800013C01E /* ArriveTimeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArriveTimeSettingViewController.swift; sourceTree = "<group>"; };
 		82C3E744801BB4D143EC0C0E /* Pods-KoreanTimeBlocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreanTimeBlocker.debug.xcconfig"; path = "Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker.debug.xcconfig"; sourceTree = "<group>"; };
 		C33D125562D7A6EB4FB522B7 /* Pods-KoreanTimeBlocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreanTimeBlocker.release.xcconfig"; path = "Target Support Files/Pods-KoreanTimeBlocker/Pods-KoreanTimeBlocker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,8 +77,11 @@
 				7E92C06E243B65D200648FAF /* SceneDelegate.swift */,
 				7E92C070243B65D200648FAF /* ViewController.swift */,
 				7E9E1B9F2448C52C001937D8 /* AlarmSettingViewController.swift */,
+				7EC9F09B2450B1800013C01E /* ArriveTimeSettingViewController.swift */,
+				7EC9F099244F22AC0013C01E /* CompleteViewController.swift */,
 				7E9E1BA1244B4B10001937D8 /* Alarm.swift */,
 				7E92C072243B65D200648FAF /* Main.storyboard */,
+				7E7940B5245574FF0026E0EA /* DateFormatted.swift */,
 				7E92C075243B65D700648FAF /* Assets.xcassets */,
 				7E92C077243B65D800648FAF /* LaunchScreen.storyboard */,
 				7E92C07A243B65D800648FAF /* Info.plist */,
@@ -214,9 +223,12 @@
 			files = (
 				7E92C071243B65D200648FAF /* ViewController.swift in Sources */,
 				7E92C06D243B65D200648FAF /* AppDelegate.swift in Sources */,
+				7E7940B6245574FF0026E0EA /* DateFormatted.swift in Sources */,
 				7E9E1BA2244B4B10001937D8 /* Alarm.swift in Sources */,
+				7EC9F09C2450B1800013C01E /* ArriveTimeSettingViewController.swift in Sources */,
 				7E9E1BA02448C52C001937D8 /* AlarmSettingViewController.swift in Sources */,
 				7E92C06F243B65D200648FAF /* SceneDelegate.swift in Sources */,
+				7EC9F09A244F22AC0013C01E /* CompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
