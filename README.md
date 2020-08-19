@@ -1,6 +1,3 @@
-Alarm system considering preparation time and time to destination
-
-
 
 # KoreanTimeBlocker
 Alarm system considering preparation time and time to destination
