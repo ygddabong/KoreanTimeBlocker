@@ -1,0 +1,8 @@
+# CocoaPods — run `pod install` to recreate
+Pods/
+
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+.DS_Store
