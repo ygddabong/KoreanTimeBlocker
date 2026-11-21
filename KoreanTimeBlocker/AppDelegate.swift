@@ -17,9 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        GMSServices.provideAPIKey("API KEY")
-        GMSPlacesClient.provideAPIKey("API KEY")
+        // The key comes from the GMS_API_KEY build setting via Info.plist (see README),
+        // so it never has to be written into source code.
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "GMSApiKey") as? String ?? ""
+        if apiKey.isEmpty {
+            print("⚠️ GMSApiKey is empty — set the GMS_API_KEY build setting (see README).")
+        }
+        GMSServices.provideAPIKey(apiKey)
+        GMSPlacesClient.provideAPIKey(apiKey)
 
         return true
     }
